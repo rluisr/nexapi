@@ -39,21 +39,21 @@ type QueryOrderParams struct {
 }
 
 type Order struct {
-	Symbol              string  `json:"symbol"`
-	OrigClientOrderID   string  `json:"origClientOrderId"`
-	OrderID             int64   `json:"orderId"`
-	ClientOrderID       string  `json:"clientOrderId"`
-	Price               float64 `json:"price"`
-	OrigQty             float64 `json:"origQty"`
-	ExecutedQty         float64 `json:"executedQty"`
-	CummulativeQuoteQty float64 `json:"cummulativeQuoteQty"`
-	Status              string  `json:"status"`
-	TimeInForce         string  `json:"timeInForce"`
-	Type                string  `json:"type"`
-	Side                string  `json:"side"`
-	StopPrice           float64 `json:"stopPrice"`
-	Time                int64   `json:"time"`
-	UpdateTime          int64   `json:"updateTime"`
-	IsWorking           bool    `json:"isWorking"`
-	OrigQuoteOrderQty   float64 `json:"origQuoteOrderQty"`
+	Symbol              string `json:"symbol"`
+	OrigClientOrderID   string `json:"origClientOrderId"`
+	OrderID             string `json:"orderId"`
+	ClientOrderID       string `json:"clientOrderId"`
+	Price               string `json:"price"`
+	OrigQty             string `json:"origQty"`
+	ExecutedQty         string `json:"executedQty"`
+	CummulativeQuoteQty string `json:"cummulativeQuoteQty"`
+	Status              string `json:"status"`
+	TimeInForce         string `json:"timeInForce"`
+	Type                string `json:"type"`
+	Side                string `json:"side"`
+	StopPrice           string `json:"stopPrice"`
+	Time                int64  `json:"time"`
+	UpdateTime          int64  `json:"updateTime"`
+	IsWorking           bool   `json:"isWorking"`
+	OrigQuoteOrderQty   string `json:"origQuoteOrderQty"`
 }
