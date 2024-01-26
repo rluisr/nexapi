@@ -19,7 +19,7 @@ type CreateOrderParams struct {
 // {"symbol":"USDCUSDT","orderId":"C01__379608025012453377","orderListId":-1,"price":"1.0505","origQty":"32.36","type":"MARKET","side":"BUY","transactTime":1706287841805}
 type CreateOrderResp struct {
 	Symbol       string `json:"symbol"`
-	OrderId      string `json:"orderId"`
+	OrderID      string `json:"orderId"`
 	OrderListId  int64  `json:"orderListId"`
 	Price        string `json:"price"`
 	OrigQty      string `json:"origQty"`
@@ -28,11 +28,21 @@ type CreateOrderResp struct {
 	TransactTime int64  `json:"transactTime"`
 }
 
+type QueryOrderParam struct {
+	Symbol  string `url:"symbol"`
+	OrderID string `url:"orderId"`
+}
+
+type QueryOrderParams struct {
+	QueryOrderParam
+	utils.DefaultParam
+}
+
 type Order struct {
 	Symbol              string  `json:"symbol"`
-	OrigClientOrderId   string  `json:"origClientOrderId"`
-	OrderId             int64   `json:"orderId"`
-	ClientOrderId       string  `json:"clientOrderId"`
+	OrigClientOrderID   string  `json:"origClientOrderId"`
+	OrderID             int64   `json:"orderId"`
+	ClientOrderID       string  `json:"clientOrderId"`
 	Price               float64 `json:"price"`
 	OrigQty             float64 `json:"origQty"`
 	ExecutedQty         float64 `json:"executedQty"`
