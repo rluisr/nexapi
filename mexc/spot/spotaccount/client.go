@@ -49,6 +49,7 @@ type SpotAccountClientCfg struct {
 	Key        string `validate:"required"`
 	Secret     string `validate:"required"`
 	RecvWindow int
+	HTTPClient *http.Client
 }
 
 func NewSpotAccountClient(cfg *SpotAccountClientCfg) (*SpotAccountClient, error) {
@@ -66,6 +67,7 @@ func NewSpotAccountClient(cfg *SpotAccountClientCfg) (*SpotAccountClient, error)
 		Key:        cfg.Key,
 		Secret:     cfg.Secret,
 		RecvWindow: cfg.RecvWindow,
+		HTTPClient: cfg.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
