@@ -16,15 +16,16 @@ type CreateOrderParams struct {
 	utils.DefaultParam
 }
 
+// {"symbol":"USDCUSDT","orderId":"C01__379608025012453377","orderListId":-1,"price":"1.0505","origQty":"32.36","type":"MARKET","side":"BUY","transactTime":1706287841805}
 type CreateOrderResp struct {
-	Symbol       string  `json:"symbol"`
-	OrderId      int64   `json:"orderId"`
-	OrderListId  int64   `json:"orderListId"`
-	Price        float64 `json:"price"`
-	OrigQty      float64 `json:"origQty"`
-	Type         string  `json:"type"`
-	Side         string  `json:"side"`
-	TransactTime int64   `json:"transactTime"`
+	Symbol       string `json:"symbol"`
+	OrderId      string `json:"orderId"`
+	OrderListId  int64  `json:"orderListId"`
+	Price        string `json:"price"`
+	OrigQty      string `json:"origQty"`
+	Type         string `json:"type"`
+	Side         string `json:"side"`
+	TransactTime int64  `json:"transactTime"`
 }
 
 type Order struct {
