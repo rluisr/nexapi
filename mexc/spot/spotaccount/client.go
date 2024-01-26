@@ -181,58 +181,6 @@ func (s *SpotAccountClient) Transfer(ctx context.Context, param types.TransferPa
 	return nil
 }
 
-func (s *SpotAccountClient) GetAllOrders(ctx context.Context) ([]types.Order, error) {
-	req := spotutils.HTTPRequest{
-		BaseURL: s.GetBaseURL(),
-		Path:    "/api/v3/allOrders",
-		Method:  http.MethodGet,
-	}
-
-	{
-		headers, err := s.GenAuthHeaders(req)
-		if err != nil {
-			return nil, err
-		}
-		req.Headers = headers
-	}
-
-	{
-		query := mexcutils.DefaultParam{
-			RecvWindow: s.GetRecvWindow(),
-			Timestamp:  time.Now().UnixMilli(),
-		}
-
-		err := s.validate.Struct(query)
-		if err != nil {
-			return nil, err
-		}
-
-		signString, err := mexcutils.NormalizeRequestContent(query, nil)
-		if err != nil {
-			return nil, err
-		}
-
-		h := hmac.New(sha256.New, []byte(s.GetSecret()))
-		h.Write([]byte(signString))
-		signature := hex.EncodeToString(h.Sum(nil))
-		query.Signature = signature
-
-		req.Query = query
-	}
-
-	resp, err := s.SendHTTPRequest(ctx, req)
-	if err != nil {
-		return nil, err
-	}
-
-	var ret []types.Order
-	if err := json.Unmarshal(resp, &ret); err != nil {
-		return nil, err
-	}
-
-	return ret, nil
-}
-
 func (s *SpotAccountClient) CreateOrder(ctx context.Context, param types.CreateOrderParam) (*types.CreateOrderResp, error) {
 	req := spotutils.HTTPRequest{
 		BaseURL: s.GetBaseURL(),
