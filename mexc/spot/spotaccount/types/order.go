@@ -3,12 +3,12 @@ package types
 import "github.com/rluisr/nexapi/mexc/utils"
 
 type CreateOrderParam struct {
-	Symbol        string   `json:"symbol"`
-	Side          string   `json:"side"`                    // ENUM: Order Side
-	Type          string   `json:"type"`                    // ENUM: Order Type
-	Quantity      *float64 `json:"quantity,omitempty"`      // DECIMAL
-	QuoteOrderQty *float64 `json:"quoteOrderQty,omitempty"` // DECIMAL
-	Price         *float64 `json:"price,omitempty"`         // DECIMAL
+	Symbol        string   `url:"symbol"`
+	Side          string   `url:"side"`                    // ENUM: Order Side
+	Type          string   `url:"type"`                    // ENUM: Order Type
+	Quantity      *float64 `url:"quantity,omitempty"`      // DECIMAL
+	QuoteOrderQty *float64 `url:"quoteOrderQty,omitempty"` // DECIMAL
+	Price         *float64 `url:"price,omitempty"`         // DECIMAL
 }
 
 type CreateOrderParams struct {

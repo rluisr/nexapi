@@ -86,37 +86,33 @@ func (s *SpotAccountClient) GetAccountInfo(ctx context.Context) (*types.AccountI
 		Method:  http.MethodGet,
 	}
 
-	{
-		headers, err := s.GenAuthHeaders(req)
-		if err != nil {
-			return nil, err
-		}
-		req.Headers = headers
+	headers, err := s.GenAuthHeaders(req)
+	if err != nil {
+		return nil, err
+	}
+	req.Headers = headers
+
+	query := mexcutils.DefaultParam{
+		RecvWindow: s.GetRecvWindow(),
+		Timestamp:  time.Now().UnixMilli(),
 	}
 
-	{
-		query := mexcutils.DefaultParam{
-			RecvWindow: s.GetRecvWindow(),
-			Timestamp:  time.Now().UnixMilli(),
-		}
-
-		err := s.validate.Struct(query)
-		if err != nil {
-			return nil, err
-		}
-
-		signString, err := mexcutils.NormalizeRequestContent(query, nil)
-		if err != nil {
-			return nil, err
-		}
-
-		h := hmac.New(sha256.New, []byte(s.GetSecret()))
-		h.Write([]byte(signString))
-		signature := hex.EncodeToString(h.Sum(nil))
-		query.Signature = signature
-
-		req.Query = query
+	err = s.validate.Struct(query)
+	if err != nil {
+		return nil, err
 	}
+
+	signString, err := mexcutils.NormalizeRequestContent(query, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	h := hmac.New(sha256.New, []byte(s.GetSecret()))
+	h.Write([]byte(signString))
+	signature := hex.EncodeToString(h.Sum(nil))
+	query.Signature = signature
+
+	req.Query = query
 
 	resp, err := s.SendHTTPRequest(ctx, req)
 	if err != nil {
@@ -124,7 +120,7 @@ func (s *SpotAccountClient) GetAccountInfo(ctx context.Context) (*types.AccountI
 	}
 
 	var ret types.AccountInfo
-	if err := json.Unmarshal(resp, &ret); err != nil {
+	if err = json.Unmarshal(resp, &ret); err != nil {
 		return nil, err
 	}
 
@@ -138,42 +134,38 @@ func (s *SpotAccountClient) Transfer(ctx context.Context, param types.TransferPa
 		Method:  http.MethodPost,
 	}
 
-	{
-		headers, err := s.GenAuthHeaders(req)
-		if err != nil {
-			return err
-		}
-		req.Headers = headers
+	headers, err := s.GenAuthHeaders(req)
+	if err != nil {
+		return err
+	}
+	req.Headers = headers
+
+	query := types.TransferParams{
+		TransferParam: param,
+		DefaultParam: mexcutils.DefaultParam{
+			RecvWindow: s.GetRecvWindow(),
+			Timestamp:  time.Now().UnixMilli(),
+		},
 	}
 
-	{
-		query := types.TransferParams{
-			TransferParam: param,
-			DefaultParam: mexcutils.DefaultParam{
-				RecvWindow: s.GetRecvWindow(),
-				Timestamp:  time.Now().UnixMilli(),
-			},
-		}
-
-		err := s.validate.Struct(query)
-		if err != nil {
-			return err
-		}
-
-		signString, err := mexcutils.NormalizeRequestContent(query, nil)
-		if err != nil {
-			return err
-		}
-
-		h := hmac.New(sha256.New, []byte(s.GetSecret()))
-		h.Write([]byte(signString))
-		signature := hex.EncodeToString(h.Sum(nil))
-		query.Signature = signature
-
-		req.Query = query
+	err = s.validate.Struct(query)
+	if err != nil {
+		return err
 	}
 
-	_, err := s.SendHTTPRequest(ctx, req)
+	signString, err := mexcutils.NormalizeRequestContent(query, nil)
+	if err != nil {
+		return err
+	}
+
+	h := hmac.New(sha256.New, []byte(s.GetSecret()))
+	h.Write([]byte(signString))
+	signature := hex.EncodeToString(h.Sum(nil))
+	query.Signature = signature
+
+	req.Query = query
+
+	_, err = s.SendHTTPRequest(ctx, req)
 	if err != nil {
 		return err
 	}
@@ -188,40 +180,36 @@ func (s *SpotAccountClient) CreateOrder(ctx context.Context, param types.CreateO
 		Method:  http.MethodPost,
 	}
 
-	{
-		headers, err := s.GenAuthHeaders(req)
-		if err != nil {
-			return nil, err
-		}
-		req.Headers = headers
+	headers, err := s.GenAuthHeaders(req)
+	if err != nil {
+		return nil, err
+	}
+	req.Headers = headers
+
+	query := types.CreateOrderParams{
+		CreateOrderParam: param,
+		DefaultParam: mexcutils.DefaultParam{
+			RecvWindow: s.GetRecvWindow(),
+			Timestamp:  time.Now().UnixMilli(),
+		},
 	}
 
-	{
-		query := types.CreateOrderParams{
-			CreateOrderParam: param,
-			DefaultParam: mexcutils.DefaultParam{
-				RecvWindow: s.GetRecvWindow(),
-				Timestamp:  time.Now().UnixMilli(),
-			},
-		}
-
-		err := s.validate.Struct(query)
-		if err != nil {
-			return nil, err
-		}
-
-		signString, err := mexcutils.NormalizeRequestContent(query, nil)
-		if err != nil {
-			return nil, err
-		}
-
-		h := hmac.New(sha256.New, []byte(s.GetSecret()))
-		h.Write([]byte(signString))
-		signature := hex.EncodeToString(h.Sum(nil))
-		query.Signature = signature
-
-		req.Query = query
+	err = s.validate.Struct(query)
+	if err != nil {
+		return nil, err
 	}
+
+	signString, err := mexcutils.NormalizeRequestContent(query, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	h := hmac.New(sha256.New, []byte(s.GetSecret()))
+	h.Write([]byte(signString))
+	signature := hex.EncodeToString(h.Sum(nil))
+	query.Signature = signature
+
+	req.Query = query
 
 	resp, err := s.SendHTTPRequest(ctx, req)
 	if err != nil {
