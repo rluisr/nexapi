@@ -176,7 +176,7 @@ func (s *SpotAccountClient) Transfer(ctx context.Context, param types.TransferPa
 func (s *SpotAccountClient) CreateOrder(ctx context.Context, param types.CreateOrderParam) (*types.CreateOrderResp, error) {
 	req := spotutils.HTTPRequest{
 		BaseURL: s.GetBaseURL(),
-		Path:    "/api/v3/order/test",
+		Path:    "/api/v3/order",
 		Method:  http.MethodPost,
 	}
 
