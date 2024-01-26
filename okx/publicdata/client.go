@@ -22,9 +22,9 @@ import (
 	"net/http"
 
 	"github.com/go-playground/validator"
-	"github.com/linstohu/nexapi/okx/publicdata/types"
-	okxutils "github.com/linstohu/nexapi/okx/utils"
-	"github.com/linstohu/nexapi/utils"
+	"github.com/rluisr/nexapi/okx/publicdata/types"
+	okxutils "github.com/rluisr/nexapi/okx/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type PublicDataClient struct {

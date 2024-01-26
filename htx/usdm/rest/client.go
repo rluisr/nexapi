@@ -21,7 +21,7 @@ import (
 	"log/slog"
 
 	"github.com/go-playground/validator"
-	"github.com/linstohu/nexapi/htx/utils"
+	"github.com/rluisr/nexapi/htx/utils"
 )
 
 type UsdmClient struct {

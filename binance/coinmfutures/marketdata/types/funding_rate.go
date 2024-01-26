@@ -17,7 +17,7 @@
 
 package types
 
-import "github.com/linstohu/nexapi/utils"
+import "github.com/rluisr/nexapi/utils"
 
 type GetFundingRateParam struct {
 	Symbol    string `url:"symbol" validate:"required"`

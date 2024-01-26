@@ -17,7 +17,7 @@
 
 package types
 
-import "github.com/linstohu/nexapi/utils"
+import "github.com/rluisr/nexapi/utils"
 
 type GetMarkPriceParam struct {
 	Symbol string `url:"symbol,omitempty" validate:"omitempty"`

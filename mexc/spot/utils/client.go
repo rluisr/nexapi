@@ -41,6 +41,7 @@ type SpotClient struct {
 	baseURL     string
 	key, secret string
 	recvWindow  int
+	httpClient  *http.Client
 }
 
 type SpotClientCfg struct {
@@ -52,6 +53,7 @@ type SpotClientCfg struct {
 	Key        string
 	Secret     string
 	RecvWindow int
+	HTTPClient *http.Client
 }
 
 func NewSpotClient(cfg *SpotClientCfg) (*SpotClient, error) {
@@ -67,6 +69,7 @@ func NewSpotClient(cfg *SpotClientCfg) (*SpotClient, error) {
 		key:        cfg.Key,
 		secret:     cfg.Secret,
 		recvWindow: cfg.RecvWindow,
+		httpClient: cfg.HTTPClient,
 	}
 
 	if cfg.RecvWindow == 0 {
@@ -119,8 +122,6 @@ func (s *SpotClient) GenAuthHeaders(req HTTPRequest) (map[string]string, error) 
 }
 
 func (s *SpotClient) SendHTTPRequest(ctx context.Context, req HTTPRequest) ([]byte, error) {
-	client := http.Client{}
-
 	var body io.Reader
 	if req.Body != nil {
 		formData, err := query.Values(req.Body)
@@ -160,7 +161,7 @@ func (s *SpotClient) SendHTTPRequest(ctx context.Context, req HTTPRequest) ([]by
 		s.logger.Info(fmt.Sprintf("\n%s\n", string(dump)))
 	}
 
-	resp, err := client.Do(request)
+	resp, err := s.httpClient.Do(request)
 	if err != nil {
 		return nil, err
 	}

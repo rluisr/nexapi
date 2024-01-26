@@ -30,8 +30,8 @@ import (
 	"github.com/chuckpreslar/emission"
 	"github.com/go-playground/validator"
 	"github.com/gorilla/websocket"
-	"github.com/linstohu/nexapi/woox/websocket/types"
 	cmap "github.com/orcaman/concurrent-map/v2"
+	"github.com/rluisr/nexapi/woox/websocket/types"
 )
 
 type WooXWebsocketClient struct {

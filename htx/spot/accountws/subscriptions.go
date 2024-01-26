@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/linstohu/nexapi/htx/spot/accountws/types"
+	"github.com/rluisr/nexapi/htx/spot/accountws/types"
 )
 
 func (m *AccountWsClient) Subscribe(topic string) error {

@@ -22,12 +22,12 @@ import (
 	"net/http"
 
 	"github.com/go-playground/validator"
-	"github.com/linstohu/nexapi/binance/europeanoptions/marketdata/types"
-	eoutils "github.com/linstohu/nexapi/binance/europeanoptions/utils"
-	spottypes "github.com/linstohu/nexapi/binance/spot/marketdata/types"
-	usdmtypes "github.com/linstohu/nexapi/binance/usdmfutures/marketdata/types"
-	usdmutils "github.com/linstohu/nexapi/binance/usdmfutures/utils"
-	"github.com/linstohu/nexapi/utils"
+	"github.com/rluisr/nexapi/binance/europeanoptions/marketdata/types"
+	eoutils "github.com/rluisr/nexapi/binance/europeanoptions/utils"
+	spottypes "github.com/rluisr/nexapi/binance/spot/marketdata/types"
+	usdmtypes "github.com/rluisr/nexapi/binance/usdmfutures/marketdata/types"
+	usdmutils "github.com/rluisr/nexapi/binance/usdmfutures/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type OptionsMarketDataClient struct {

@@ -22,8 +22,8 @@ import (
 	"testing"
 	"time"
 
-	spotws "github.com/linstohu/nexapi/binance/spot/websocketmarket"
-	"github.com/linstohu/nexapi/binance/spot/websocketmarket/types"
+	spotws "github.com/rluisr/nexapi/binance/spot/websocketmarket"
+	"github.com/rluisr/nexapi/binance/spot/websocketmarket/types"
 	"github.com/stretchr/testify/assert"
 )
 

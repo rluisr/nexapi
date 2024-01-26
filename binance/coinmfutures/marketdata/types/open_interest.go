@@ -18,8 +18,8 @@
 package types
 
 import (
-	cmutils "github.com/linstohu/nexapi/binance/coinmfutures/utils"
-	"github.com/linstohu/nexapi/utils"
+	cmutils "github.com/rluisr/nexapi/binance/coinmfutures/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type GetOpenInterestParam struct {

@@ -24,9 +24,9 @@ import (
 	"net/http"
 
 	"github.com/go-playground/validator"
-	"github.com/linstohu/nexapi/binance/spot/marketdata/types"
-	spotutils "github.com/linstohu/nexapi/binance/spot/utils"
-	"github.com/linstohu/nexapi/utils"
+	"github.com/rluisr/nexapi/binance/spot/marketdata/types"
+	spotutils "github.com/rluisr/nexapi/binance/spot/utils"
+	"github.com/rluisr/nexapi/utils"
 	"github.com/valyala/fastjson"
 )
 

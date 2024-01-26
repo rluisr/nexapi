@@ -21,7 +21,7 @@ import (
 	"fmt"
 
 	"github.com/go-playground/validator"
-	cmutils "github.com/linstohu/nexapi/binance/spot/utils"
+	cmutils "github.com/rluisr/nexapi/binance/spot/utils"
 )
 
 func (c *CoinMarginedMarketStreamClient) GetAggTradeTopic(symbol string) (string, error) {

@@ -21,8 +21,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/linstohu/nexapi/binance/spot/marketdata/types"
-	spotutils "github.com/linstohu/nexapi/binance/spot/utils"
+	"github.com/rluisr/nexapi/binance/spot/marketdata/types"
+	spotutils "github.com/rluisr/nexapi/binance/spot/utils"
 	"github.com/stretchr/testify/assert"
 )
 

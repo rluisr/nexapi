@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/linstohu/nexapi/binance/utils"
+	"github.com/rluisr/nexapi/binance/utils"
 )
 
 func (o *OptionsMarketStreamClient) Subscribe(topics []string) error {

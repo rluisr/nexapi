@@ -32,8 +32,8 @@ import (
 	"github.com/chuckpreslar/emission"
 	"github.com/go-playground/validator"
 	"github.com/gorilla/websocket"
-	htxutils "github.com/linstohu/nexapi/htx/utils"
 	cmap "github.com/orcaman/concurrent-map/v2"
+	htxutils "github.com/rluisr/nexapi/htx/utils"
 )
 
 type MarketWsClient struct {

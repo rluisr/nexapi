@@ -22,8 +22,8 @@ import (
 	"os"
 	"testing"
 
-	spotutils "github.com/linstohu/nexapi/binance/spot/utils"
-	"github.com/linstohu/nexapi/binance/spot/wallet/types"
+	spotutils "github.com/rluisr/nexapi/binance/spot/utils"
+	"github.com/rluisr/nexapi/binance/spot/wallet/types"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/linstohu/nexapi/htx/spot/marketws/types"
-	resttypes "github.com/linstohu/nexapi/htx/spot/rest/types"
+	"github.com/rluisr/nexapi/htx/spot/marketws/types"
+	resttypes "github.com/rluisr/nexapi/htx/spot/rest/types"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -23,7 +23,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/linstohu/nexapi/woox/websocket/types"
+	"github.com/rluisr/nexapi/woox/websocket/types"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -23,8 +23,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/linstohu/nexapi/htx/spot/rest/types"
-	"github.com/linstohu/nexapi/htx/utils"
+	"github.com/rluisr/nexapi/htx/spot/rest/types"
+	"github.com/rluisr/nexapi/htx/utils"
 )
 
 func (scli *SpotClient) NewOrder(ctx context.Context, param types.NewOrderParam) (*types.NewOrderResp, error) {

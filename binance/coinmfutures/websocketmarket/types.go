@@ -18,8 +18,8 @@
 package websocketmarket
 
 import (
-	cmutils "github.com/linstohu/nexapi/binance/coinmfutures/utils"
-	usdmutils "github.com/linstohu/nexapi/binance/usdmfutures/utils"
+	cmutils "github.com/rluisr/nexapi/binance/coinmfutures/utils"
+	usdmutils "github.com/rluisr/nexapi/binance/usdmfutures/utils"
 )
 
 type IndexPrice struct {

@@ -22,7 +22,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/linstohu/nexapi/bybit/utils"
+	"github.com/rluisr/nexapi/bybit/utils"
 	"github.com/stretchr/testify/assert"
 )
 

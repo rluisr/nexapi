@@ -23,9 +23,9 @@ import (
 	"net/http"
 
 	"github.com/go-playground/validator"
-	eoutils "github.com/linstohu/nexapi/binance/europeanoptions/utils"
-	usdmutils "github.com/linstohu/nexapi/binance/usdmfutures/utils"
-	"github.com/linstohu/nexapi/utils"
+	eoutils "github.com/rluisr/nexapi/binance/europeanoptions/utils"
+	usdmutils "github.com/rluisr/nexapi/binance/usdmfutures/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type httpAuthClient struct {

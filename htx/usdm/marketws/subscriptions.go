@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/linstohu/nexapi/htx/usdm/marketws/types"
+	"github.com/rluisr/nexapi/htx/usdm/marketws/types"
 )
 
 func (m *MarketWsClient) Subscribe(topic string) error {

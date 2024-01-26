@@ -22,9 +22,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/linstohu/nexapi/deribit/rest/types"
-	"github.com/linstohu/nexapi/deribit/rest/types/marketdata"
-	"github.com/linstohu/nexapi/deribit/rest/types/supporting"
+	"github.com/rluisr/nexapi/deribit/rest/types"
+	"github.com/rluisr/nexapi/deribit/rest/types/marketdata"
+	"github.com/rluisr/nexapi/deribit/rest/types/supporting"
 )
 
 func (d *DeribitRestClient) Test(ctx context.Context) (*supporting.TestResponse, error) {

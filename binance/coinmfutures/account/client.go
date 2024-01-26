@@ -27,11 +27,11 @@ import (
 	"time"
 
 	"github.com/go-playground/validator"
-	"github.com/linstohu/nexapi/binance/coinmfutures/account/types"
-	cmutils "github.com/linstohu/nexapi/binance/coinmfutures/utils"
-	umutils "github.com/linstohu/nexapi/binance/usdmfutures/utils"
-	bnutils "github.com/linstohu/nexapi/binance/utils"
-	"github.com/linstohu/nexapi/utils"
+	"github.com/rluisr/nexapi/binance/coinmfutures/account/types"
+	cmutils "github.com/rluisr/nexapi/binance/coinmfutures/utils"
+	umutils "github.com/rluisr/nexapi/binance/usdmfutures/utils"
+	bnutils "github.com/rluisr/nexapi/binance/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type CoinMFuturesAccountClient struct {

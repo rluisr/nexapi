@@ -21,10 +21,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/linstohu/nexapi/binance/europeanoptions/marketdata/types"
-	eoutils "github.com/linstohu/nexapi/binance/europeanoptions/utils"
-	usdmtypes "github.com/linstohu/nexapi/binance/usdmfutures/marketdata/types"
-	usdmutils "github.com/linstohu/nexapi/binance/usdmfutures/utils"
+	"github.com/rluisr/nexapi/binance/europeanoptions/marketdata/types"
+	eoutils "github.com/rluisr/nexapi/binance/europeanoptions/utils"
+	usdmtypes "github.com/rluisr/nexapi/binance/usdmfutures/marketdata/types"
+	usdmutils "github.com/rluisr/nexapi/binance/usdmfutures/utils"
 	"github.com/stretchr/testify/assert"
 )
 

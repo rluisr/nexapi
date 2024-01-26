@@ -17,7 +17,7 @@
 
 package types
 
-import "github.com/linstohu/nexapi/utils"
+import "github.com/rluisr/nexapi/utils"
 
 type GetApiRestrictionsResp struct {
 	Http *utils.ApiResponse

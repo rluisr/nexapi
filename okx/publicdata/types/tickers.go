@@ -17,7 +17,7 @@
 
 package types
 
-import okxutils "github.com/linstohu/nexapi/okx/utils"
+import okxutils "github.com/rluisr/nexapi/okx/utils"
 
 type GetMarketTickersParam struct {
 	InstType   InstrumentType `url:"instType,omitempty" validate:"omitempty,oneof=SPOT SWAP FUTURES OPTION"`

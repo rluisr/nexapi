@@ -22,8 +22,8 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/linstohu/nexapi/htx/usdm/rest/types"
-	"github.com/linstohu/nexapi/htx/utils"
+	"github.com/rluisr/nexapi/htx/usdm/rest/types"
+	"github.com/rluisr/nexapi/htx/utils"
 )
 
 func (ucli *UsdmClient) PlaceIsolatedOrder(ctx context.Context, param types.PlaceIsolatedOrderParam) (*types.PlaceOrderResp, error) {

@@ -22,8 +22,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/linstohu/nexapi/htx/spot/rest/types"
-	"github.com/linstohu/nexapi/htx/utils"
+	"github.com/rluisr/nexapi/htx/spot/rest/types"
+	"github.com/rluisr/nexapi/htx/utils"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -23,10 +23,10 @@ import (
 	"net/http"
 
 	"github.com/go-playground/validator"
-	spottypes "github.com/linstohu/nexapi/binance/spot/marketdata/types"
-	"github.com/linstohu/nexapi/binance/usdmfutures/marketdata/types"
-	umutils "github.com/linstohu/nexapi/binance/usdmfutures/utils"
-	"github.com/linstohu/nexapi/utils"
+	spottypes "github.com/rluisr/nexapi/binance/spot/marketdata/types"
+	"github.com/rluisr/nexapi/binance/usdmfutures/marketdata/types"
+	umutils "github.com/rluisr/nexapi/binance/usdmfutures/utils"
+	"github.com/rluisr/nexapi/utils"
 	"github.com/valyala/fastjson"
 )
 

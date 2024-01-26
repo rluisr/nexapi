@@ -21,7 +21,7 @@ import (
 	"fmt"
 
 	"github.com/go-playground/validator"
-	spotutils "github.com/linstohu/nexapi/binance/spot/utils"
+	spotutils "github.com/rluisr/nexapi/binance/spot/utils"
 )
 
 func (m *SpotMarketStreamClient) GetAggTradeTopic(symbol string) (string, error) {

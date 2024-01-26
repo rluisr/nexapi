@@ -17,7 +17,7 @@
 
 package types
 
-import htxutils "github.com/linstohu/nexapi/htx/utils"
+import htxutils "github.com/rluisr/nexapi/htx/utils"
 
 type KlineInterval string
 

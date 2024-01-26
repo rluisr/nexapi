@@ -21,7 +21,7 @@ import (
 	"fmt"
 
 	"github.com/go-playground/validator"
-	spottypes "github.com/linstohu/nexapi/htx/spot/rest/types"
+	spottypes "github.com/rluisr/nexapi/htx/spot/rest/types"
 )
 
 type KlineTopicParam struct {

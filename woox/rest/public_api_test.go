@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/linstohu/nexapi/woox/rest/types"
+	"github.com/rluisr/nexapi/woox/rest/types"
 	"github.com/stretchr/testify/assert"
 )
 

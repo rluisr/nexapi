@@ -25,10 +25,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/linstohu/nexapi/deribit/rest/types"
-	"github.com/linstohu/nexapi/deribit/rest/types/account"
-	"github.com/linstohu/nexapi/deribit/rest/types/auth"
-	"github.com/linstohu/nexapi/deribit/rest/types/trading"
+	"github.com/rluisr/nexapi/deribit/rest/types"
+	"github.com/rluisr/nexapi/deribit/rest/types/account"
+	"github.com/rluisr/nexapi/deribit/rest/types/auth"
+	"github.com/rluisr/nexapi/deribit/rest/types/trading"
 )
 
 func (d *DeribitRestClient) Auth(ctx context.Context, param auth.AuthParams) (*auth.AuthResponse, error) {

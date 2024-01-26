@@ -27,10 +27,10 @@ import (
 	"time"
 
 	"github.com/go-playground/validator"
-	"github.com/linstohu/nexapi/binance/spot/margin/types"
-	spotutils "github.com/linstohu/nexapi/binance/spot/utils"
-	bnutils "github.com/linstohu/nexapi/binance/utils"
-	"github.com/linstohu/nexapi/utils"
+	"github.com/rluisr/nexapi/binance/spot/margin/types"
+	spotutils "github.com/rluisr/nexapi/binance/spot/utils"
+	bnutils "github.com/rluisr/nexapi/binance/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type SpotMarginClient struct {

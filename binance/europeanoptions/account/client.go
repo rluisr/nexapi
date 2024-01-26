@@ -28,11 +28,11 @@ import (
 	"time"
 
 	"github.com/go-playground/validator"
-	"github.com/linstohu/nexapi/binance/europeanoptions/account/types"
-	eoutils "github.com/linstohu/nexapi/binance/europeanoptions/utils"
-	usdmutils "github.com/linstohu/nexapi/binance/usdmfutures/utils"
-	bnutils "github.com/linstohu/nexapi/binance/utils"
-	"github.com/linstohu/nexapi/utils"
+	"github.com/rluisr/nexapi/binance/europeanoptions/account/types"
+	eoutils "github.com/rluisr/nexapi/binance/europeanoptions/utils"
+	usdmutils "github.com/rluisr/nexapi/binance/usdmfutures/utils"
+	bnutils "github.com/rluisr/nexapi/binance/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type OptionsAccountClient struct {

@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/linstohu/nexapi/htx/usdm/marketws/types"
-	usdmtypes "github.com/linstohu/nexapi/htx/usdm/rest/types"
+	"github.com/rluisr/nexapi/htx/usdm/marketws/types"
+	usdmtypes "github.com/rluisr/nexapi/htx/usdm/rest/types"
 	"github.com/stretchr/testify/assert"
 )
 

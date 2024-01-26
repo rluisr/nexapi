@@ -19,7 +19,7 @@ package rest
 
 import (
 	"github.com/go-playground/validator"
-	bybitutils "github.com/linstohu/nexapi/bybit/utils"
+	bybitutils "github.com/rluisr/nexapi/bybit/utils"
 )
 
 type BybitClient struct {

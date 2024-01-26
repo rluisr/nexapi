@@ -21,7 +21,7 @@ import (
 	"fmt"
 
 	"github.com/go-playground/validator"
-	eoutils "github.com/linstohu/nexapi/binance/europeanoptions/utils"
+	eoutils "github.com/rluisr/nexapi/binance/europeanoptions/utils"
 )
 
 // GetTradeTopic

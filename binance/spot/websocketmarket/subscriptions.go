@@ -22,8 +22,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/linstohu/nexapi/binance/spot/websocketmarket/types"
-	"github.com/linstohu/nexapi/binance/utils"
+	"github.com/rluisr/nexapi/binance/spot/websocketmarket/types"
+	"github.com/rluisr/nexapi/binance/utils"
 )
 
 func (m *SpotMarketStreamClient) Subscribe(topics []string) error {

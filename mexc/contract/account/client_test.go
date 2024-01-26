@@ -22,7 +22,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/linstohu/nexapi/mexc/contract/utils"
+	"github.com/rluisr/nexapi/mexc/contract/utils"
 	"github.com/stretchr/testify/assert"
 )
 

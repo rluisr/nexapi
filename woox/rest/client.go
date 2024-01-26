@@ -36,7 +36,7 @@ import (
 
 	validator "github.com/go-playground/validator/v10"
 	"github.com/google/go-querystring/query"
-	"github.com/linstohu/nexapi/woox/rest/types"
+	"github.com/rluisr/nexapi/woox/rest/types"
 )
 
 type WooXRestClient struct {

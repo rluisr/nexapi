@@ -21,7 +21,7 @@ import (
 	"fmt"
 
 	"github.com/go-playground/validator"
-	usdmtypes "github.com/linstohu/nexapi/htx/usdm/rest/types"
+	usdmtypes "github.com/rluisr/nexapi/htx/usdm/rest/types"
 )
 
 type KlineTopicParam struct {

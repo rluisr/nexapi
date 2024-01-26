@@ -17,7 +17,7 @@
 
 package types
 
-import "github.com/linstohu/nexapi/utils"
+import "github.com/rluisr/nexapi/utils"
 
 type GetCoinInfoResp struct {
 	Http *utils.ApiResponse

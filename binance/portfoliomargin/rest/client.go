@@ -27,10 +27,10 @@ import (
 	"time"
 
 	"github.com/go-playground/validator"
-	"github.com/linstohu/nexapi/binance/portfoliomargin/rest/types"
-	pmutils "github.com/linstohu/nexapi/binance/portfoliomargin/utils"
-	bnutils "github.com/linstohu/nexapi/binance/utils"
-	"github.com/linstohu/nexapi/utils"
+	"github.com/rluisr/nexapi/binance/portfoliomargin/rest/types"
+	pmutils "github.com/rluisr/nexapi/binance/portfoliomargin/utils"
+	bnutils "github.com/rluisr/nexapi/binance/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type PortfolioMarginAccountClient struct {

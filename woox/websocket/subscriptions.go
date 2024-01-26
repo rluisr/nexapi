@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/linstohu/nexapi/woox/websocket/types"
+	"github.com/rluisr/nexapi/woox/websocket/types"
 )
 
 func (w *WooXWebsocketClient) Subscribe(topics []string) error {

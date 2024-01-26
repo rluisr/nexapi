@@ -18,7 +18,7 @@
 package types
 
 import (
-	"github.com/linstohu/nexapi/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type GetOrderbookParams struct {

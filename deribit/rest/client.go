@@ -31,8 +31,8 @@ import (
 
 	validator "github.com/go-playground/validator/v10"
 	"github.com/google/go-querystring/query"
-	"github.com/linstohu/nexapi/deribit/rest/types"
-	"github.com/linstohu/nexapi/deribit/rest/types/auth"
+	"github.com/rluisr/nexapi/deribit/rest/types"
+	"github.com/rluisr/nexapi/deribit/rest/types/auth"
 )
 
 type DeribitRestClient struct {

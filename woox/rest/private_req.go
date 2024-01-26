@@ -23,7 +23,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/linstohu/nexapi/woox/rest/types"
+	"github.com/rluisr/nexapi/woox/rest/types"
 )
 
 func (w *WooXRestClient) SendOrder(ctx context.Context, params types.SendOrderReq) (*types.SendOrderResp, error) {

@@ -21,8 +21,8 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/linstohu/nexapi/bybit/rest/types"
-	"github.com/linstohu/nexapi/utils"
+	"github.com/rluisr/nexapi/bybit/rest/types"
+	"github.com/rluisr/nexapi/utils"
 )
 
 // GetUnifiedAccountBalance(Unified Account API): UNIFIED (trade spot/linear/options)

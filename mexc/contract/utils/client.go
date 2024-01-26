@@ -46,6 +46,7 @@ type ContractClient struct {
 	baseURL     string
 	key, secret string
 	recvWindow  int
+	httpClient  *http.Client
 }
 
 type ContractClientCfg struct {
@@ -57,6 +58,7 @@ type ContractClientCfg struct {
 	Key        string
 	Secret     string
 	RecvWindow int
+	HTTPClient *http.Client
 }
 
 func NewContractClient(cfg *ContractClientCfg) (*ContractClient, error) {
@@ -72,6 +74,7 @@ func NewContractClient(cfg *ContractClientCfg) (*ContractClient, error) {
 		key:        cfg.Key,
 		secret:     cfg.Secret,
 		recvWindow: cfg.RecvWindow,
+		httpClient: cfg.HTTPClient,
 	}
 
 	if cfg.RecvWindow == 0 {
@@ -157,8 +160,6 @@ func (c *ContractClient) GenAuthHeaders(req HTTPRequest) (map[string]string, err
 }
 
 func (c *ContractClient) SendHTTPRequest(ctx context.Context, req HTTPRequest) ([]byte, error) {
-	client := http.Client{}
-
 	var body io.Reader
 	if req.Body != nil {
 		formData, err := query.Values(req.Body)
@@ -198,7 +199,7 @@ func (c *ContractClient) SendHTTPRequest(ctx context.Context, req HTTPRequest) (
 		c.logger.Info(fmt.Sprintf("\n%s\n", string(dump)))
 	}
 
-	resp, err := client.Do(request)
+	resp, err := c.httpClient.Do(request)
 	if err != nil {
 		return nil, err
 	}

@@ -18,7 +18,7 @@
 package types
 
 import (
-	umutils "github.com/linstohu/nexapi/binance/usdmfutures/utils"
+	umutils "github.com/rluisr/nexapi/binance/usdmfutures/utils"
 )
 
 type GetKlineParam struct {

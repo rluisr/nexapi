@@ -17,9 +17,14 @@
 
 package types
 
-type GetAccountAsset struct {
+type GetAccountAssets struct {
 	Response
 	Data []*ContractAsset `json:"data"`
+}
+
+type GetAccountAsset struct {
+	Response
+	Data *ContractAsset `json:"data"`
 }
 
 type ContractAsset struct {

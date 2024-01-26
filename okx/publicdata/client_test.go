@@ -21,8 +21,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/linstohu/nexapi/okx/publicdata/types"
-	okxutils "github.com/linstohu/nexapi/okx/utils"
+	"github.com/rluisr/nexapi/okx/publicdata/types"
+	okxutils "github.com/rluisr/nexapi/okx/utils"
 	"github.com/stretchr/testify/assert"
 )
 

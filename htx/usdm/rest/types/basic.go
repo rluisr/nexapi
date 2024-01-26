@@ -18,7 +18,7 @@
 package types
 
 import (
-	htxutils "github.com/linstohu/nexapi/htx/utils"
+	htxutils "github.com/rluisr/nexapi/htx/utils"
 )
 
 type GetContractInfoParam struct {

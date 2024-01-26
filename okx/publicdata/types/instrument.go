@@ -18,7 +18,7 @@
 package types
 
 import (
-	okxutils "github.com/linstohu/nexapi/okx/utils"
+	okxutils "github.com/rluisr/nexapi/okx/utils"
 )
 
 type GetInstrumentsParam struct {

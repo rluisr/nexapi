@@ -21,9 +21,9 @@ import (
 	"fmt"
 	"testing"
 
-	coinmws "github.com/linstohu/nexapi/binance/coinmfutures/websocketmarket"
-	spottypes "github.com/linstohu/nexapi/binance/spot/websocketmarket/types"
-	usdmtypes "github.com/linstohu/nexapi/binance/usdmfutures/websocketmarket/types"
+	coinmws "github.com/rluisr/nexapi/binance/coinmfutures/websocketmarket"
+	spottypes "github.com/rluisr/nexapi/binance/spot/websocketmarket/types"
+	usdmtypes "github.com/rluisr/nexapi/binance/usdmfutures/websocketmarket/types"
 	"github.com/stretchr/testify/assert"
 )
 

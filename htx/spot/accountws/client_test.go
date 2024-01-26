@@ -22,7 +22,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/linstohu/nexapi/htx/spot/accountws/types"
+	"github.com/rluisr/nexapi/htx/spot/accountws/types"
 	"github.com/stretchr/testify/assert"
 )
 

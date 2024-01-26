@@ -29,8 +29,8 @@ import (
 
 	"github.com/go-playground/validator"
 	"github.com/google/go-querystring/query"
-	usdmutils "github.com/linstohu/nexapi/binance/usdmfutures/utils"
-	"github.com/linstohu/nexapi/utils"
+	usdmutils "github.com/rluisr/nexapi/binance/usdmfutures/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type CoinMarginedClient struct {

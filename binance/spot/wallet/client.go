@@ -27,10 +27,10 @@ import (
 	"time"
 
 	"github.com/go-playground/validator"
-	spotutils "github.com/linstohu/nexapi/binance/spot/utils"
-	"github.com/linstohu/nexapi/binance/spot/wallet/types"
-	bnutils "github.com/linstohu/nexapi/binance/utils"
-	"github.com/linstohu/nexapi/utils"
+	spotutils "github.com/rluisr/nexapi/binance/spot/utils"
+	"github.com/rluisr/nexapi/binance/spot/wallet/types"
+	bnutils "github.com/rluisr/nexapi/binance/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type SpotWalletClient struct {

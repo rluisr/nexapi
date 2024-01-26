@@ -22,8 +22,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/linstohu/nexapi/binance/europeanoptions/account/types"
-	eoutils "github.com/linstohu/nexapi/binance/europeanoptions/utils"
+	"github.com/rluisr/nexapi/binance/europeanoptions/account/types"
+	eoutils "github.com/rluisr/nexapi/binance/europeanoptions/utils"
 	"github.com/stretchr/testify/assert"
 )
 

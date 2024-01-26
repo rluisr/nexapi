@@ -35,7 +35,7 @@ import (
 
 	"github.com/go-playground/validator"
 	goquery "github.com/google/go-querystring/query"
-	"github.com/linstohu/nexapi/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type BybitClient struct {

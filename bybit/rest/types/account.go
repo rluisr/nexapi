@@ -17,7 +17,7 @@
 
 package types
 
-import "github.com/linstohu/nexapi/utils"
+import "github.com/rluisr/nexapi/utils"
 
 type GetWalletBalanceParam struct {
 	AccountType AccountType `url:"accountType" validate:"required,oneof=UNIFIED SPOT OPTION CONTRACT FUND"` //

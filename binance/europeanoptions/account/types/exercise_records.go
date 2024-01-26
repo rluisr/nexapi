@@ -18,7 +18,7 @@
 package types
 
 import (
-	bnutils "github.com/linstohu/nexapi/binance/utils"
+	bnutils "github.com/rluisr/nexapi/binance/utils"
 )
 
 type GetExerciseRecordParam struct {

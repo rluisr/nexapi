@@ -18,7 +18,7 @@
 package types
 
 import (
-	spotutils "github.com/linstohu/nexapi/mexc/spot/utils"
+	spotutils "github.com/rluisr/nexapi/mexc/spot/utils"
 )
 
 type GetKlineParam struct {

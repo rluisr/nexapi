@@ -22,9 +22,9 @@ import (
 	"fmt"
 	"strings"
 
-	spottypes "github.com/linstohu/nexapi/binance/spot/websocketmarket/types"
-	"github.com/linstohu/nexapi/binance/usdmfutures/websocketmarket/types"
-	"github.com/linstohu/nexapi/binance/utils"
+	spottypes "github.com/rluisr/nexapi/binance/spot/websocketmarket/types"
+	"github.com/rluisr/nexapi/binance/usdmfutures/websocketmarket/types"
+	"github.com/rluisr/nexapi/binance/utils"
 )
 
 func (u *USDMarginedMarketStreamClient) Subscribe(topics []string) error {

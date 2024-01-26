@@ -27,10 +27,10 @@ import (
 	"time"
 
 	"github.com/go-playground/validator"
-	"github.com/linstohu/nexapi/binance/usdmfutures/account/types"
-	umutils "github.com/linstohu/nexapi/binance/usdmfutures/utils"
-	bnutils "github.com/linstohu/nexapi/binance/utils"
-	"github.com/linstohu/nexapi/utils"
+	"github.com/rluisr/nexapi/binance/usdmfutures/account/types"
+	umutils "github.com/rluisr/nexapi/binance/usdmfutures/utils"
+	bnutils "github.com/rluisr/nexapi/binance/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type UsdMFuturesAccountClient struct {

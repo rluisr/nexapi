@@ -20,12 +20,13 @@ package account
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 	"log/slog"
 	"net/http"
 
 	"github.com/go-playground/validator"
-	"github.com/linstohu/nexapi/mexc/contract/account/types"
-	"github.com/linstohu/nexapi/mexc/contract/utils"
+	"github.com/rluisr/nexapi/mexc/contract/account/types"
+	"github.com/rluisr/nexapi/mexc/contract/utils"
 )
 
 type ContractAccountClient struct {
@@ -44,6 +45,7 @@ type ContractAccountClientCfg struct {
 	Key        string `validate:"required"`
 	Secret     string `validate:"required"`
 	RecvWindow int
+	HTTPClient *http.Client
 }
 
 func NewContractAccountClient(cfg *utils.ContractClientCfg) (*ContractAccountClient, error) {
@@ -61,6 +63,7 @@ func NewContractAccountClient(cfg *utils.ContractClientCfg) (*ContractAccountCli
 		Key:        cfg.Key,
 		Secret:     cfg.Secret,
 		RecvWindow: cfg.RecvWindow,
+		HTTPClient: cfg.HTTPClient,
 	})
 	if err != nil {
 		return nil, err
@@ -72,7 +75,35 @@ func NewContractAccountClient(cfg *utils.ContractClientCfg) (*ContractAccountCli
 	}, nil
 }
 
-func (c *ContractAccountClient) GetAccountAsset(ctx context.Context) (*types.GetAccountAsset, error) {
+func (c *ContractAccountClient) GetAccountAsset(ctx context.Context, currency string) (*types.GetAccountAsset, error) {
+	req := utils.HTTPRequest{
+		BaseURL: c.GetBaseURL(),
+		Path:    fmt.Sprintf("/api/v1/private/account/asset/%s", currency),
+		Method:  http.MethodGet,
+	}
+
+	{
+		headers, err := c.GenAuthHeaders(req)
+		if err != nil {
+			return nil, err
+		}
+		req.Headers = headers
+	}
+
+	resp, err := c.SendHTTPRequest(ctx, req)
+	if err != nil {
+		return nil, err
+	}
+
+	var ret types.GetAccountAsset
+	if err := json.Unmarshal(resp, &ret); err != nil {
+		return nil, err
+	}
+
+	return &ret, nil
+}
+
+func (c *ContractAccountClient) GetAccountAssets(ctx context.Context) (*types.GetAccountAssets, error) {
 	req := utils.HTTPRequest{
 		BaseURL: c.GetBaseURL(),
 		Path:    "/api/v1/private/account/assets",
@@ -92,7 +123,7 @@ func (c *ContractAccountClient) GetAccountAsset(ctx context.Context) (*types.Get
 		return nil, err
 	}
 
-	var ret types.GetAccountAsset
+	var ret types.GetAccountAssets
 	if err := json.Unmarshal(resp, &ret); err != nil {
 		return nil, err
 	}

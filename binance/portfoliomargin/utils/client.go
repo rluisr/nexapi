@@ -29,7 +29,7 @@ import (
 
 	"github.com/go-playground/validator"
 	"github.com/google/go-querystring/query"
-	"github.com/linstohu/nexapi/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type PortfolioMarginClient struct {

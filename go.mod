@@ -1,4 +1,4 @@
-module github.com/linstohu/nexapi
+module github.com/rluisr/nexapi
 
 go 1.21
 

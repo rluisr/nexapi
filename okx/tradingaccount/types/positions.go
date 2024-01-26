@@ -17,7 +17,7 @@
 
 package types
 
-import okxutils "github.com/linstohu/nexapi/okx/utils"
+import okxutils "github.com/rluisr/nexapi/okx/utils"
 
 type GetPositionsParam struct {
 	InstType PosInstType `url:"instType,omitempty" validate:"omitempty,oneof=MARGIN SWAP FUTURES OPTION"`

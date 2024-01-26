@@ -22,8 +22,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/linstohu/nexapi/okx/tradingaccount/types"
-	"github.com/linstohu/nexapi/okx/utils"
+	"github.com/rluisr/nexapi/okx/tradingaccount/types"
+	"github.com/rluisr/nexapi/okx/utils"
 	"github.com/stretchr/testify/assert"
 )
 

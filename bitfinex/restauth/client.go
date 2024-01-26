@@ -33,8 +33,8 @@ import (
 
 	"github.com/go-playground/validator"
 	"github.com/google/go-querystring/query"
-	bitutils "github.com/linstohu/nexapi/bitfinex/utils"
-	"github.com/linstohu/nexapi/utils"
+	bitutils "github.com/rluisr/nexapi/bitfinex/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type BitfinexAuthClient struct {

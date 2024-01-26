@@ -23,8 +23,8 @@ import (
 	"net/http"
 
 	"github.com/go-playground/validator"
-	"github.com/linstohu/nexapi/mexc/contract/marketdata/types"
-	"github.com/linstohu/nexapi/mexc/contract/utils"
+	"github.com/rluisr/nexapi/mexc/contract/marketdata/types"
+	"github.com/rluisr/nexapi/mexc/contract/utils"
 )
 
 type ContractMarketDataClient struct {

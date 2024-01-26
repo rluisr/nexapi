@@ -21,8 +21,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/linstohu/nexapi/binance/usdmfutures/marketdata/types"
-	umutils "github.com/linstohu/nexapi/binance/usdmfutures/utils"
+	"github.com/rluisr/nexapi/binance/usdmfutures/marketdata/types"
+	umutils "github.com/rluisr/nexapi/binance/usdmfutures/utils"
 	"github.com/stretchr/testify/assert"
 )
 

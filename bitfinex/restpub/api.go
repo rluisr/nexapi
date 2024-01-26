@@ -22,7 +22,7 @@ import (
 	"net/http"
 
 	"github.com/go-playground/validator"
-	"github.com/linstohu/nexapi/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 var (

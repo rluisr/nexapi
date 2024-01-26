@@ -18,8 +18,8 @@
 package types
 
 import (
-	umutils "github.com/linstohu/nexapi/binance/usdmfutures/utils"
-	"github.com/linstohu/nexapi/utils"
+	umutils "github.com/rluisr/nexapi/binance/usdmfutures/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type GetExchangeInfoResp struct {

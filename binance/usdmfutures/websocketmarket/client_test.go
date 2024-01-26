@@ -22,9 +22,9 @@ import (
 	"testing"
 	"time"
 
-	spottypes "github.com/linstohu/nexapi/binance/spot/websocketmarket/types"
-	usdmws "github.com/linstohu/nexapi/binance/usdmfutures/websocketmarket"
-	"github.com/linstohu/nexapi/binance/usdmfutures/websocketmarket/types"
+	spottypes "github.com/rluisr/nexapi/binance/spot/websocketmarket/types"
+	usdmws "github.com/rluisr/nexapi/binance/usdmfutures/websocketmarket"
+	"github.com/rluisr/nexapi/binance/usdmfutures/websocketmarket/types"
 	"github.com/stretchr/testify/assert"
 )
 

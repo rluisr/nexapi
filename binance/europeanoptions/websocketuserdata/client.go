@@ -29,7 +29,7 @@ import (
 	"github.com/chuckpreslar/emission"
 	"github.com/go-playground/validator"
 	"github.com/gorilla/websocket"
-	eoutils "github.com/linstohu/nexapi/binance/europeanoptions/utils"
+	eoutils "github.com/rluisr/nexapi/binance/europeanoptions/utils"
 )
 
 type OptionsUserDataStreamClient struct {

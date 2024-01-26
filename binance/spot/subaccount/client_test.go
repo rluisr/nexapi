@@ -23,8 +23,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/linstohu/nexapi/binance/spot/subaccount/types"
-	spotutils "github.com/linstohu/nexapi/binance/spot/utils"
+	"github.com/rluisr/nexapi/binance/spot/subaccount/types"
+	spotutils "github.com/rluisr/nexapi/binance/spot/utils"
 	"github.com/stretchr/testify/assert"
 )
 

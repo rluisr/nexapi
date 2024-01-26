@@ -18,8 +18,8 @@
 package types
 
 import (
-	spotutils "github.com/linstohu/nexapi/binance/spot/utils"
-	"github.com/linstohu/nexapi/utils"
+	spotutils "github.com/rluisr/nexapi/binance/spot/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type GetKlineParam struct {

@@ -22,8 +22,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/linstohu/nexapi/mexc/spot/spotaccount/types"
-	spotutils "github.com/linstohu/nexapi/mexc/spot/utils"
+	"github.com/rluisr/nexapi/mexc/spot/spotaccount/types"
+	spotutils "github.com/rluisr/nexapi/mexc/spot/utils"
 	"github.com/stretchr/testify/assert"
 )
 

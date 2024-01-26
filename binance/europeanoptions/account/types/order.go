@@ -18,9 +18,9 @@
 package types
 
 import (
-	eoutils "github.com/linstohu/nexapi/binance/europeanoptions/utils"
-	bnutils "github.com/linstohu/nexapi/binance/utils"
-	"github.com/linstohu/nexapi/utils"
+	eoutils "github.com/rluisr/nexapi/binance/europeanoptions/utils"
+	bnutils "github.com/rluisr/nexapi/binance/utils"
+	"github.com/rluisr/nexapi/utils"
 )
 
 type OrderResp struct {

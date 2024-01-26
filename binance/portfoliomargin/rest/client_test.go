@@ -22,7 +22,7 @@ import (
 	"os"
 	"testing"
 
-	pmutils "github.com/linstohu/nexapi/binance/portfoliomargin/utils"
+	pmutils "github.com/rluisr/nexapi/binance/portfoliomargin/utils"
 	"github.com/stretchr/testify/assert"
 )
 

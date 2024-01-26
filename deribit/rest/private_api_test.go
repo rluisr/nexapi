@@ -22,9 +22,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/linstohu/nexapi/deribit/rest/types/account"
-	"github.com/linstohu/nexapi/deribit/rest/types/auth"
-	"github.com/linstohu/nexapi/deribit/rest/types/trading"
+	"github.com/rluisr/nexapi/deribit/rest/types/account"
+	"github.com/rluisr/nexapi/deribit/rest/types/auth"
+	"github.com/rluisr/nexapi/deribit/rest/types/trading"
 	"github.com/stretchr/testify/assert"
 )
 

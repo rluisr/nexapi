@@ -24,8 +24,8 @@ import (
 	"net/http"
 
 	"github.com/go-playground/validator"
-	"github.com/linstohu/nexapi/kucoin/rest/account/types"
-	"github.com/linstohu/nexapi/kucoin/rest/utils"
+	"github.com/rluisr/nexapi/kucoin/rest/account/types"
+	"github.com/rluisr/nexapi/kucoin/rest/utils"
 )
 
 type AccountClient struct {

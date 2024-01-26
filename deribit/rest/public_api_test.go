@@ -21,7 +21,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/linstohu/nexapi/deribit/rest/types/marketdata"
+	"github.com/rluisr/nexapi/deribit/rest/types/marketdata"
 	"github.com/stretchr/testify/assert"
 )
 
