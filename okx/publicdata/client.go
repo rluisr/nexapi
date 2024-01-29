@@ -43,9 +43,10 @@ func NewPublicDataClient(cfg *okxutils.OKXRestClientCfg) (*PublicDataClient, err
 	}
 
 	cli, err := okxutils.NewOKXRestClient(&okxutils.OKXRestClientCfg{
-		Debug:   cfg.Debug,
-		Logger:  cfg.Logger,
-		BaseURL: cfg.BaseURL,
+		Debug:      cfg.Debug,
+		Logger:     cfg.Logger,
+		BaseURL:    cfg.BaseURL,
+		HTTPClient: cfg.HTTPClient,
 	})
 	if err != nil {
 		return nil, err

@@ -39,6 +39,7 @@ import (
 
 type OKXRestClient struct {
 	baseURL                 string
+	httpClient              *http.Client
 	key, secret, passphrase string
 	// debug mode
 	debug bool
@@ -55,7 +56,8 @@ type OKXRestClientCfg struct {
 	Passphrase string
 	Debug      bool
 	// Logger
-	Logger *slog.Logger
+	Logger     *slog.Logger
+	HTTPClient *http.Client
 }
 
 func NewOKXRestClient(cfg *OKXRestClientCfg) (*OKXRestClient, error) {
@@ -68,6 +70,7 @@ func NewOKXRestClient(cfg *OKXRestClientCfg) (*OKXRestClient, error) {
 
 	cli := OKXRestClient{
 		baseURL:    cfg.BaseURL,
+		httpClient: cfg.HTTPClient,
 		key:        cfg.Key,
 		secret:     cfg.Secret,
 		passphrase: cfg.Passphrase,
@@ -105,8 +108,6 @@ func (o *OKXRestClient) GetPassphrase() string {
 }
 
 func (o *OKXRestClient) SendHTTPRequest(ctx context.Context, req utils.HTTPRequest) (*utils.ApiResponse, error) {
-	client := http.Client{}
-
 	var body io.Reader
 	if req.Body != nil {
 		jsonBody, err := json.Marshal(req.Body)
@@ -145,7 +146,7 @@ func (o *OKXRestClient) SendHTTPRequest(ctx context.Context, req utils.HTTPReque
 		o.logger.Info(fmt.Sprintf("\n%s\n", string(dump)))
 	}
 
-	resp, err := client.Do(request)
+	resp, err := o.httpClient.Do(request)
 	if err != nil {
 		return nil, err
 	}

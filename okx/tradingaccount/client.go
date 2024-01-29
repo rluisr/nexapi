@@ -37,6 +37,7 @@ type TradingAccountClient struct {
 
 type TradingAccountClientCfg struct {
 	BaseURL    string `validate:"required"`
+	HTTPClient *http.Client
 	Key        string `validate:"required"`
 	Secret     string `validate:"required"`
 	Passphrase string `validate:"required"`
@@ -57,6 +58,7 @@ func NewTradingAccountClient(cfg *TradingAccountClientCfg) (*TradingAccountClien
 		Debug:      cfg.Debug,
 		Logger:     cfg.Logger,
 		BaseURL:    cfg.BaseURL,
+		HTTPClient: cfg.HTTPClient,
 		Key:        cfg.Key,
 		Secret:     cfg.Secret,
 		Passphrase: cfg.Passphrase,
