@@ -21,8 +21,9 @@ import okxutils "github.com/rluisr/nexapi/okx/utils"
 
 type GetMarketTickersParam struct {
 	InstType   InstrumentType `url:"instType,omitempty" validate:"omitempty,oneof=SPOT SWAP FUTURES OPTION"`
-	Uly        string         `url:"uly,omitempty"`
+	InstID     string         `url:"instId,omitempty"`
 	InstFamily string         `url:"instFamily,omitempty"`
+	Uly        string         `url:"uly,omitempty"`
 }
 
 type InstrumentType = string
