@@ -47,6 +47,7 @@ type OKXRestClient struct {
 	logger *slog.Logger
 	// validate struct fields
 	validate *validator.Validate
+	isDemo   bool
 }
 
 type OKXRestClientCfg struct {
@@ -58,6 +59,7 @@ type OKXRestClientCfg struct {
 	// Logger
 	Logger     *slog.Logger
 	HTTPClient *http.Client
+	IsDemo     bool
 }
 
 func NewOKXRestClient(cfg *OKXRestClientCfg) (*OKXRestClient, error) {
@@ -76,6 +78,7 @@ func NewOKXRestClient(cfg *OKXRestClientCfg) (*OKXRestClient, error) {
 		passphrase: cfg.Passphrase,
 		debug:      cfg.Debug,
 		logger:     cfg.Logger,
+		isDemo:     cfg.IsDemo,
 
 		validate: validator,
 	}
@@ -177,6 +180,10 @@ func (o *OKXRestClient) GenAuthHeaders(req utils.HTTPRequest) (map[string]string
 	headers := map[string]string{
 		"Content-Type": "application/json",
 		"Accept":       "application/json",
+	}
+
+	if o.isDemo {
+		headers["x-simulated-trading"] = "1"
 	}
 
 	strBody := ""

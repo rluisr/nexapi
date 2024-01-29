@@ -30,9 +30,19 @@ var (
 type InstrumentType = string
 
 const (
-	Spot    = "SPOT"
-	Margin  = "MARGIN"
-	Swap    = "SWAP"
-	Futures = "FUTURES"
-	Option  = "OPTION"
+	Spot     = "SPOT"
+	Margin   = "MARGIN"
+	Swap     = "SWAP"
+	Futures  = "FUTURES"
+	Option   = "OPTION"
+	Isolated = "isolated"
+	Cross    = "cross"
+	Buy      = "buy"
+	Sell     = "sell"
+	Market   = "market"
+	Limit    = "limit"
+	PostOnly = "post_only"
+	FOK      = "fok"
+	IOC      = "ioc"
+	Index    = "index"
 )
