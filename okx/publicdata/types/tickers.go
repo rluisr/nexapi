@@ -26,6 +26,10 @@ type GetMarketTickersParam struct {
 	Uly        string         `url:"uly,omitempty"`
 }
 
+type GetIndexTickersParam struct {
+	InstID string `url:"instId,omitempty"`
+}
+
 type InstrumentType = string
 
 const (
@@ -38,6 +42,11 @@ const (
 type GetMarketTickersResp struct {
 	okxutils.Response
 	Data []*MarketTicker `json:"data"`
+}
+
+type GetIndexTickersResp struct {
+	okxutils.Response
+	Data []*IndexTicker `json:"data"`
 }
 
 type MarketTicker struct {
@@ -57,4 +66,15 @@ type MarketTicker struct {
 	SodUtc0   string `json:"sodUtc0"`
 	SodUtc8   string `json:"sodUtc8"`
 	TS        string `json:"ts"`
+}
+
+type IndexTicker struct {
+	InstID  string `json:"instId"`
+	IdxPx   string `json:"idxPx"`
+	High24H string `json:"high24h"`
+	SodUtc0 string `json:"sodUtc0"`
+	Open24H string `json:"open24h"`
+	Low24H  string `json:"low24h"`
+	SodUtc8 string `json:"sodUtc8"`
+	Ts      string `json:"ts"`
 }

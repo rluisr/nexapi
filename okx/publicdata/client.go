@@ -113,3 +113,31 @@ func (p *PublicDataClient) GetMarketTickers(ctx context.Context, param types.Get
 
 	return &body, nil
 }
+
+func (p *PublicDataClient) GetIndexTickers(ctx context.Context, param types.GetIndexTickersParam) (*types.GetIndexTickersResp, error) {
+	req := utils.HTTPRequest{
+		Debug:   p.GetDebug(),
+		BaseURL: p.GetBaseURL(),
+		Path:    "/api/v5/market/index-tickers",
+		Method:  http.MethodGet,
+		Query:   param,
+	}
+
+	headers, err := p.GenPubHeaders()
+	if err != nil {
+		return nil, err
+	}
+	req.Headers = headers
+
+	resp, err := p.SendHTTPRequest(ctx, req)
+	if err != nil {
+		return nil, err
+	}
+
+	var body types.GetIndexTickersResp
+	if err := resp.ReadJsonBody(&body); err != nil {
+		return nil, err
+	}
+
+	return &body, nil
+}
