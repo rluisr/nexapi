@@ -56,8 +56,7 @@ func TestPlaceOrder_Margin(t *testing.T) {
 		assert.FailNowf(t, "PlaceOrder", "%+v", resp)
 	}
 }
-
-func TestPlaceOrder_Spot(t *testing.T) {
+func TestPlaceOrder_SpotBuy(t *testing.T) {
 	cli := testNewOrderBookAccountClient(t)
 
 	resp, err := cli.PlaceOrder(context.TODO(), types.PlaceOrderParam{
@@ -65,6 +64,24 @@ func TestPlaceOrder_Spot(t *testing.T) {
 		TdMode:  utils.Cash,
 		Side:    utils.Buy,
 		OrdType: utils.Market,
+		Sz:      "10",
+	})
+	assert.Nil(t, err)
+
+	if resp.Code != "0" {
+		assert.FailNowf(t, "PlaceOrder", "%+v", resp)
+	}
+}
+
+func TestPlaceOrder_SpotSell(t *testing.T) {
+	cli := testNewOrderBookAccountClient(t)
+
+	resp, err := cli.PlaceOrder(context.TODO(), types.PlaceOrderParam{
+		InstId:  "BTC-USDT",
+		TdMode:  utils.Cash,
+		Side:    utils.Sell,
+		OrdType: utils.Limit,
+		Px:      "",
 		Sz:      "10",
 	})
 	assert.Nil(t, err)

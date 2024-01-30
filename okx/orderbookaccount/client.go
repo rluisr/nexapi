@@ -75,6 +75,39 @@ func NewOrderBookAccountClient(cfg *OrderBookAccountClientCfg) (*OrderBookAccoun
 	}, nil
 }
 
+func (o *OrderBookAccountClient) GetOrder(ctx context.Context, param types.GetOrderParam) (*types.GetOrderResp, error) {
+	err := o.validate.Struct(param)
+	if err != nil {
+		return nil, err
+	}
+
+	req := utils.HTTPRequest{
+		Debug:   o.GetDebug(),
+		BaseURL: o.GetBaseURL(),
+		Path:    "/api/v5/trade/order",
+		Method:  http.MethodGet,
+		Query:   param,
+	}
+
+	headers, err := o.GenAuthHeaders(req)
+	if err != nil {
+		return nil, err
+	}
+	req.Headers = headers
+
+	resp, err := o.SendHTTPRequest(ctx, req)
+	if err != nil {
+		return nil, err
+	}
+
+	var body types.GetOrderResp
+	if err := resp.ReadJsonBody(&body); err != nil {
+		return nil, err
+	}
+
+	return &body, nil
+}
+
 func (o *OrderBookAccountClient) PlaceOrder(ctx context.Context, param types.PlaceOrderParam) (*types.PlaceOrderResp, error) {
 	err := o.validate.Struct(param)
 	if err != nil {

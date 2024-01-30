@@ -48,3 +48,62 @@ type PlaceOrderResp struct {
 		SMsg    string `json:"sMsg"`
 	} `json:"data"`
 }
+
+type GetOrderParam struct {
+	InstId string `url:"instId"`
+	ordId  string `url:"ordId"`
+}
+
+type GetOrderResp struct {
+	okxutils.Response
+	Data []struct {
+		InstType           string `json:"instType"`
+		InstID             string `json:"instId"`
+		Ccy                string `json:"ccy"`
+		OrdID              string `json:"ordId"`
+		ClOrdID            string `json:"clOrdId"`
+		Tag                string `json:"tag"`
+		Px                 string `json:"px"`
+		PxUsd              string `json:"pxUsd"`
+		PxVol              string `json:"pxVol"`
+		PxType             string `json:"pxType"`
+		Sz                 string `json:"sz"`
+		Pnl                string `json:"pnl"`
+		OrdType            string `json:"ordType"`
+		Side               string `json:"side"`
+		PosSide            string `json:"posSide"`
+		TdMode             string `json:"tdMode"`
+		AccFillSz          string `json:"accFillSz"`
+		FillPx             string `json:"fillPx"`
+		TradeID            string `json:"tradeId"`
+		FillSz             string `json:"fillSz"`
+		FillTime           string `json:"fillTime"`
+		State              string `json:"state"`
+		AvgPx              string `json:"avgPx"`
+		Lever              string `json:"lever"`
+		AttachAlgoClOrdID  string `json:"attachAlgoClOrdId"`
+		TpTriggerPx        string `json:"tpTriggerPx"`
+		TpTriggerPxType    string `json:"tpTriggerPxType"`
+		TpOrdPx            string `json:"tpOrdPx"`
+		SlTriggerPx        string `json:"slTriggerPx"`
+		SlTriggerPxType    string `json:"slTriggerPxType"`
+		SlOrdPx            string `json:"slOrdPx"`
+		AttachAlgoOrds     []any  `json:"attachAlgoOrds"`
+		StpID              string `json:"stpId"`
+		StpMode            string `json:"stpMode"`
+		FeeCcy             string `json:"feeCcy"`
+		Fee                string `json:"fee"`
+		RebateCcy          string `json:"rebateCcy"`
+		Rebate             string `json:"rebate"`
+		TgtCcy             string `json:"tgtCcy"`
+		Category           string `json:"category"`
+		ReduceOnly         string `json:"reduceOnly"`
+		CancelSource       string `json:"cancelSource"`
+		CancelSourceReason string `json:"cancelSourceReason"`
+		QuickMgnType       string `json:"quickMgnType"`
+		AlgoClOrdID        string `json:"algoClOrdId"`
+		AlgoID             string `json:"algoId"`
+		UTime              string `json:"uTime"`
+		CTime              string `json:"cTime"`
+	} `json:"data"`
+}
