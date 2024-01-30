@@ -51,7 +51,7 @@ type PlaceOrderResp struct {
 
 type GetOrderParam struct {
 	InstId string `url:"instId"`
-	ordId  string `url:"ordId"`
+	OrdId  string `url:"ordId"`
 }
 
 type GetOrderResp struct {
