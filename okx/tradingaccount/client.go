@@ -42,6 +42,7 @@ type TradingAccountClientCfg struct {
 	Secret     string `validate:"required"`
 	Passphrase string `validate:"required"`
 	Debug      bool
+	IsDemo     bool
 	// Logger
 	Logger *slog.Logger
 }
@@ -56,6 +57,7 @@ func NewTradingAccountClient(cfg *TradingAccountClientCfg) (*TradingAccountClien
 
 	cli, err := okxutils.NewOKXRestClient(&okxutils.OKXRestClientCfg{
 		Debug:      cfg.Debug,
+		IsDemo:     cfg.IsDemo,
 		Logger:     cfg.Logger,
 		BaseURL:    cfg.BaseURL,
 		HTTPClient: cfg.HTTPClient,

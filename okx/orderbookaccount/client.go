@@ -42,9 +42,9 @@ type OrderBookAccountClientCfg struct {
 	Secret     string `validate:"required"`
 	Passphrase string `validate:"required"`
 	Debug      bool
+	IsDemo     bool
 	// Logger
 	Logger *slog.Logger
-	IsDemo bool `validate:"-"`
 }
 
 func NewOrderBookAccountClient(cfg *OrderBookAccountClientCfg) (*OrderBookAccountClient, error) {
