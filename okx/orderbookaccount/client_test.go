@@ -28,15 +28,15 @@ func testNewOrderBookAccountClient(t *testing.T) *OrderBookAccountClient {
 	return cli
 }
 
-func TestPlaceOrder(t *testing.T) {
+func TestPlaceOrder_Margin(t *testing.T) {
 	cli := testNewOrderBookAccountClient(t)
 
-	_, err := cli.PlaceOrder(context.TODO(), types.PlaceOrderParam{
+	resp, err := cli.PlaceOrder(context.TODO(), types.PlaceOrderParam{
 		InstId:  "BTC-USDT",
 		TdMode:  utils.Isolated,
 		Side:    utils.Buy,
 		OrdType: utils.Market,
-		Sz:      "1",
+		Sz:      "10",
 		AttachAlgoOrds: []types.AttachAlgoOrd{
 			{
 				TpTriggerPx:     "43000",
@@ -45,10 +45,31 @@ func TestPlaceOrder(t *testing.T) {
 				SlOrdPx:         "-1",
 				TpTriggerPxType: utils.Index,
 				SlTriggerPxType: utils.Index,
-				Sz:              "1",
+				Sz:              "10",
 			},
 		},
 	})
 
 	assert.Nil(t, err)
+
+	if resp.Code != "0" {
+		assert.FailNowf(t, "PlaceOrder", "%+v", resp)
+	}
+}
+
+func TestPlaceOrder_Spot(t *testing.T) {
+	cli := testNewOrderBookAccountClient(t)
+
+	resp, err := cli.PlaceOrder(context.TODO(), types.PlaceOrderParam{
+		InstId:  "BTC-USDT",
+		TdMode:  utils.Cash,
+		Side:    utils.Buy,
+		OrdType: utils.Market,
+		Sz:      "10",
+	})
+	assert.Nil(t, err)
+
+	if resp.Code != "0" {
+		assert.FailNowf(t, "PlaceOrder", "%+v", resp)
+	}
 }
