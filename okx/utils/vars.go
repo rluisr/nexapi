@@ -35,6 +35,7 @@ const (
 	Swap     = "SWAP"
 	Futures  = "FUTURES"
 	Option   = "OPTION"
+	Cash     = "cash"
 	Isolated = "isolated"
 	Cross    = "cross"
 	Buy      = "buy"
